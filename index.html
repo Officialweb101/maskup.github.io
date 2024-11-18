@@ -1,17 +1,20 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mask Up: Stay Anonymous</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
         body {
-            background-image: url('https://www.transparenttextures.com/patterns/stars.png');
+            background-color: #121212; /* Dark background */
+            color: #ffffff; /* Light text color */
+            font-family: 'Roboto', sans-serif;
         }
-        .hidden {
-            display: none;
+        .header-icon {
+            margin-right: 10px;
         }
         .carousel {
             display: flex;
@@ -22,164 +25,169 @@
             flex: none;
             scroll-snap-align: start;
             width: 100%;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            background-color: #1e1e1e; /* Darker card background */
+            margin-right: 1rem;
+        }
+        .footer {
+            background-color: #1f1f1f; /* Dark footer */
         }
     </style>
 </head>
-<body class="bg-gray-100 font-roboto">
-    <header class="bg-blue-600 text-white p-4">
-        <div class="container mx-auto flex justify-between items-center">
-            <h1 class="text-xl">Mask Up: Stay Anonymous</h1>
-            <nav class="flex items-center">
-                <ul class="hidden md:flex space-x-4">
-                    <li><a href="#" class="text-white" data-target="home"><i class="fas fa-home"></i> Home</a></li>
-                    <li><a href="#" class="text-white" data-target="about"><i class="fas fa-info-circle"></i> About</a></li>
-                    <li><a href="#" class="text-white" data-target="features"><i class="fas fa-cogs"></i> Features</a></li>
-                    <li><a href="#" class="text-white" data-target="contact"><i class="fas fa-envelope"></i> Contact</a></li>
-                    <li><a href="#" class="text-white" data-target="profile"><i class="fas fa-user"></i> Profile</a></li>
+<body>
+    <header class="bg-dark text-light p-4 sticky-top shadow">
+        <div class="container d-flex justify-content-between align-items-center">
+            <h1 class="h4">
+                <i class="fas fa-mask header-icon"></i>
+                Mask Up: Stay Anonymous
+            </h1>
+            <nav class="d-none d-md-flex">
+                <ul class="nav">
+                    <li class="nav-item"><a class="nav-link text-light" href="#" data-target="home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link text-light" href="#" data-target="about">About</a></li>
+                    <li class="nav-item"><a class="nav-link text-light" href="#" data-target="features">Features</a></li>
+                    <li class="nav-item"><a class="nav-link text-light" href="#" data-target="contact">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link text-light" href="#" data-target="profile">Profile</a></li>
                 </ul>
-                <div class="md:hidden">
-                    <button id="menu-toggle" class="text-white focus:outline-none">
-                        <i class="fas fa-bars"></i>
-                    </button>
-                </div>
-                <form id="search-form" class="flex ml-4">
-                    <input id="search-input" class="form-input px-2 py-1 rounded" type="search" placeholder="Search" aria-label="Search">
-                    <button class="ml-2 bg-white text-blue-600 px-2 py-1 rounded" type="submit"><i class="fas fa-search"></i></button>
-                </form>
             </nav>
+            <div class="d-md-none">
+                <button id="menu-toggle" class="btn btn-light">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+            <form id="search-form" class="form-inline ml-2">
+                <input id="search-input" class="form-control mr-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-light" type="submit"><i class="fas fa-search"></i></button>
+            </form>
         </div>
-        <ul id="mobile-menu" class="hidden md:hidden flex flex-col space-y-2 mt-4">
-            <li><a href="#" class="text-white" data-target="home"><i class="fas fa-home"></i> Home</a></li>
-            <li><a href="#" class="text-white" data-target="about"><i class="fas fa-info-circle"></i> About</a></li>
-            <li><a href="#" class="text-white" data-target="features"><i class="fas fa-cogs"></i> Features</a></li>
-            <li><a href="#" class="text-white" data-target="contact"><i class="fas fa-envelope"></i> Contact</a></li>
-            <li><a href="#" class="text-white" data-target="profile"><i class="fas fa-user"></i> Profile</a></li>
+        <ul id="mobile-menu" class="d-md-none flex flex-column mt-2" style="display: none;">
+            <li><a class="text-light" href="#" data-target="home">Home</a></li>
+            <li><a class="text-light" href="#" data-target="about">About</a></li>
+            <li><a class="text-light" href="#" data-target="features">Features</a></li>
+            <li><a class="text-light" href="#" data-target="contact">Contact</a></li>
+            <li><a class="text-light" href="#" data-target="profile">Profile</a></li>
         </ul>
     </header>
 
-    <main class="container mx-auto my-8 px-4">
-        <section id="home" class="bg-white p-6 rounded shadow mb-8">
-            <div class="flex justify-between items-center mb-4">
-                <h2 class="text-lg">Forum</h2>
-                <button class="bg-blue-600 text-white px-4 py-2 rounded" data-target="contact">Seek Help <i class="fas fa-hands-helping"></i></button>
+    <main class="container my-4">
+        <section id="home" class="bg-dark p-4 rounded mb-4">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <h2 class="h5">Forum</h2>
+                <button class="btn btn-primary" data-target="contact">Seek Help <i class="fas fa-hands-helping"></i></button>
             </div>
             <div class="mb-4">
-                <h3 class="text-md">Rules and Regulations</h3>
-                <ul class="list-disc pl-5">
-                    <li>Be respectful and supportive.</li>
- <li>No personal attacks or harassment.</li>
+                <h3 class="h6">Rules and Regulations</h3>
+                <ul class="list-unstyled">
+                    <li > Be respectful and supportive.</li>
+                    <li>No personal attacks or harassment.</li>
                     <li>Keep discussions constructive and on-topic.</li>
                 </ul>
             </div>
             <div class="mb-4">
-                <h3 class="text-md">Message to Those Seeking Help</h3>
+                <h3 class="h6">Message to Those Seeking Help</h3>
                 <p>You are not alone. This is a safe space to share your struggles and receive support from peers who understand what you're going through. We are here for you.</p>
-                <p class="text-red-600 font-bold">If you are in crisis or need someone to talk to, please reach out for help. Your life matters.</p>
+                <p class="text-danger font-weight-bold">If you are in crisis or need someone to talk to, please reach out for help. Your life matters.</p>
             </div>
-            <div class="mb-8">
-                <h3 class="text-md">Recent Discussions</h3>
+            <div class="mb-4">
+                <h3 class="h6">Recent Discussions</h3>
                 <div class="forum-section">
                     <!-- New discussions will be prepended here -->
                 </div>
             </div>
-            <div class="bg-white p-6 rounded shadow mb-8">
-                <h2 class="text-md mb-4">Start a New Discussion</h2>
+            <div class="bg-dark p-4 rounded mb-4">
+                <h2 class="h6 mb-4">Start a New Discussion</h2>
                 <form id="discussion-form">
-                    <div class="mb-4">
-                        <label for="title" class="block text-sm font-medium">Title</label>
-                        <input type="text" id="title" name="title" class="form-input mt-1 block w-full">
+                    <div class="form-group">
+                        <label for="title" class="text-light">Title</label>
+                        <input type="text" id="title" name="title" class="form-control" required>
                     </div>
-                    <div class="mb-4">
-                        <label for="message" class="block text-sm font-medium">Message</label>
-                        <textarea id="message" name="message" rows="4" class="form-textarea mt-1 block w-full"></textarea>
+                    <div class="form-group">
+                        <label for="message" class="text-light">Message</label>
+                        <textarea id="message" name="message" rows="4" class="form-control" required></textarea>
                     </div>
-                    <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded"><i class="fas fa-paper-plane"></i> Post Anonymously</button>
+                    <button type="submit" class="btn btn-primary"><i class="fas fa-paper-plane"></i> Post Anonymously</button>
                 </form>
             </div>
-        </section>
 
-        <section id="about" class="bg-white p-6 rounded shadow mb-8 hidden">
-            <h2 class="text-lg mb-4">About Us</h2>
+            <h2 class="h5 mb-4">About Us</h2>
             <p>Mask Up: Stay Anonymous is a platform designed to provide a safe and anonymous space for students and young adults to share their emotional struggles and receive peer support.</p>
-            <h3 class="text-md mt-4">A Poem for You</h3>
+            <h3 class="h6 mt-4">A Poem for You</h3>
             <p class="italic">"In the shadows, we find our light,<br>
             Together we stand, ready to fight.<br>
             With every word, we heal and grow,<br>
             In this safe space, let your true self show."</p>
             <p class="mt-4">Created with love by Christian, Shanniah, and Julia.</p>
-        </section>
 
-        <section id="features" class="bg-white p-6 rounded shadow mb-8 hidden">
-            <h2 class="text-lg mb-4">Features</h2>
+            <h2 class="h5 mb-4">Features</h2>
             <div class="carousel">
-                <div class="carousel-item bg-gray-100 p-4 rounded shadow mr-4">
-                    <h3 class="text-md"><i class="fas fa-user-secret"></i> Anonymous Profiles</h3>
+                <div class="carousel-item">
+                    <h3 class="h6"><i class="fas fa-user-secret"></i> Anonymous Profiles</h3>
                     <p>Interact without revealing your identity, helping you feel comfortable sharing personal struggles.</p>
                 </div>
-                <div class="carousel-item bg-gray-100 p-4 rounded shadow mr-4">
-                    <h3 class="text-md"><i class="fas fa-users"></i> Community-Based Support</h3>
+                <div class="carousel-item">
+                    <h3 class="h6"><i class="fas fa-users"></i> Community-Based Support</h3>
                     <p>Join small groups or forums where you can engage in peer-led support with others who share similar issues.</p>
                 </div>
-                <div class="carousel-item bg-gray-100 p-4 rounded shadow mr-4">
-                    <h3 class="text-md"><i class="fas fa-heart"></i> Emotional Check-Ins and Guidance</h3>
+                <div class="carousel-item">
+                    <h3 class="h6"><i class="fas fa-heart"></i> Emotional Check-Ins and Guidance</h3>
                     <p>Daily prompts for mood tracking, with access to supportive messages, mental health tips, or options to connect with peers feeling similarly.</p>
                 </div>
-                <div class="carousel-item bg-gray-100 p-4 rounded shadow mr-4">
-                    <h3 class="text-md"><i class="fas fa-shield-alt"></i> Content Moderation & Safety</h3>
+                <div class="carousel-item">
+                    <h3 class="h6"><i class="fas fa-shield-alt"></i> Content Moderation & Safety</h3>
                     <p>All discussions are monitored to ensure they remain supportive and non-triggering, maintaining a positive atmosphere.</p>
                 </div>
             </div>
-            <h3 class="text-md mt-4">Upcoming Events</h3>
-            <ul class="list-disc pl-5">
+            <h3 class="h6 mt-4">Upcoming Events</h3>
+            <ul class="list-unstyled">
                 <li>Games Night</li>
                 <li>Art Therapy Session</li>
                 <li>Poetry Reading</li>
-                <li>AI Discussion </li>
+                <li>AI Discussion</li>
                 <li>Music Jam Session</li>
             </ul>
-        </section>
 
-        <section id="contact" class="bg-white p-6 rounded shadow mb-8 hidden">
-            <h2 class="text-lg mb-4">Contact Us</h2>
+            <h2 class="h5 mb-4">Contact Us</h2>
             <p>If you have any questions or need support, feel free to reach out to us:</p>
-            <ul class="list-disc pl-5">
-                <li>Email: <a href="mailto:support@maskup.com" class="text-blue-600">support@maskup.com</a></li>
+            <ul class="list-unstyled">
+                <li>Email: <a href="mailto:support@maskup.com" class="text-primary">support@maskup.com</a></li>
                 <li>Follow us on social media:</li>
-                <li><a href="#" class="text-blue-600">Facebook</a></li>
-                <li><a href="#" class="text-blue-600">Twitter</a></li>
-                <li><a href="#" class="text-blue-600">Instagram</a></li>
+                <li><a href="#" class="text-primary ">Facebook</a></li>
+                <li><a href="#" class="text-primary">Twitter</a></li>
+                <li><a href="#" class="text-primary">Instagram</a></li>
             </ul>
             <p class="mt-4">You can also send us a direct message through our platform.</p>
-        </section>
 
-        <section id="profile" class="bg-white p-6 rounded shadow mb-8 hidden">
-            <h2 class="text-lg mb-4">User  Profile</h2>
+            <h2 class="h5 mb-4">User  Profile</h2>
             <div class="mb-4">
-                <h3 class="text-md">Interests</h3>
+                <h3 class="h6">Interests</h3>
                 <p id="interests">Reading Ikigai, Doom Scrolling</p>
-                <input type="text" id="edit-interests" class="form-input mt-1 block w-full hidden">
+                <input type="text" id="edit-interests" class="form-control d-none">
             </div>
             <div class="mb-4">
-                <h3 class="text-md">Goals</h3>
+                <h3 class="h6">Goals</h3>
                 <p id="goals">Build a network of friends who understand her struggles and share supportive interactions</p>
-                <input type="text" id="edit-goals" class="form-input mt-1 block w-full hidden">
+                <input type="text" id="edit-goals" class="form-control d-none">
             </div>
             <div class="mb-4">
-                <h3 class="text-md">Frustrations</h3>
+                <h3 class="h6">Frustrations</h3>
                 <p id="frustrations">Struggles with academic pressure and fear of falling behind in studies</p>
-                <input type="text" id="edit-frustrations" class="form-input mt-1 block w-full hidden">
+                <input type="text" id="edit-frustrations" class="form-control d-none">
             </div>
-            <button id="edit-profile" class="bg-blue-600 text-white px-4 py-2 rounded"><i class="fas fa-edit"></i> Edit Profile</button>
-            <button id="save-profile" class="bg-green-600 text-white px-4 py-2 rounded hidden"><i class="fas fa-save"></i> Save Profile</button>
+            <button id="edit-profile" class="btn btn-warning"><i class="fas fa-edit"></i> Edit Profile</button>
+            <button id="save-profile" class="btn btn-success d-none"><i class="fas fa-save"></i> Save Profile</button>
         </section>
     </main>
 
-    <footer class="bg-blue-600 text-white p-4">
-        <div class="container mx-auto text-center">
+    <footer class="footer text-light p-4">
+        <div class="container text-center">
             <p>&copy; 2023 Mask Up: Stay Anonymous. All rights reserved.</p>
         </div>
     </footer>
 
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             const navLinks = document.querySelectorAll('nav a');
@@ -188,7 +196,7 @@
             const mobileMenu = document.getElementById('mobile-menu');
 
             menuToggle.addEventListener('click', () => {
-                mobileMenu.classList.toggle('hidden');
+                mobileMenu.style.display = mobileMenu.style.display === 'none' ? 'flex' : 'none';
             });
 
             navLinks.forEach(link => {
@@ -198,14 +206,14 @@
 
                     sections.forEach(section => {
                         if (section.id === targetId) {
-                            section.classList.remove('hidden');
+                            section.classList.remove('d-none');
                         } else {
-                            section.classList.add('hidden');
+                            section.classList.add('d-none');
                         }
                     });
 
-                    if (!mobileMenu.classList.contains('hidden')) {
-                        mobileMenu.classList.add('hidden');
+                    if (mobileMenu.style.display !== 'none') {
+                        mobileMenu.style.display = 'none';
                     }
                 });
             });
@@ -221,22 +229,22 @@
 
                 if (title && message) {
                     const newDiscussion = document.createElement('div');
-                    newDiscussion.classList.add('p-6', 'bg-gray-100', 'rounded', 'shadow', 'mb-8');
+                    newDiscussion.classList.add('p-4', 'bg-dark', 'rounded', 'mb-4');
 
                     newDiscussion.innerHTML = `
-                        <h4 class="text-md">${title}</h4>
-                        <p class="text-gray-500">Posted by Anonymous on ${new Date().toLocaleDateString()}</p>
-                        < p>${message}</p>
-                        <div class="flex space-x-2 mb-4">
-                            <button class="text-blue-600" data-target="profile"><i class="fas fa-user"></i> View User Profile</button>
-                            <button class="text-red-600 delete-thread"><i class="fas fa-trash"></i> Delete</button>
+                        <h4 class="h6">${title}</h4>
+                        <p class="text-light">Posted by Anonymous on ${new Date().toLocaleDateString()}</p>
+                        <p>${message}</p>
+                        <div class="d-flex justify-content-between mb-2">
+                            <button class="btn btn-info"><i class="fas fa-user"></i> View User Profile</button>
+                            <button class="btn btn-danger delete-thread"><i class="fas fa-trash"></i> Delete</button>
                         </div>
-                        <div class="mt-4">
-                            <h5 class="text-sm">Comments</h5>
+                        <div class="mt-2">
+                            <h5 class="h6">Comments</h5>
                             <div class="space-y-2 comments-section"></div>
                             <form class="mt-2 comment-form">
-                                <input type="text" class="form-input w-full" placeholder="Add a comment">
-                                <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded mt-2"><i class="fas fa-comment"></i> Comment</button>
+                                <input type="text" class="form-control" placeholder="Add a comment" required>
+                                <button type="submit" class="btn btn-primary mt-2"><i class="fas fa-comment"></i> Comment</button>
                             </form>
                         </div>
                     `;
@@ -258,59 +266,20 @@
 
                         if (commentText) {
                             const newComment = document.createElement('div');
-                            newComment.classList.add('p-4', 'bg-gray-100', 'rounded', 'shadow', 'mb-2');
+                            newComment.classList.add('p-2', 'bg-dark', 'rounded', 'mb-2');
 
                             newComment.innerHTML = `
                                 <p>${commentText}</p>
-                                <div class="flex space-x-2">
-                                    <button class="text-blue-600" data-target="profile"><i class="fas fa-user"></i> View User Profile</button>
-                                    <button class="text-red-600 delete-comment"><i class="fas fa-trash"></i> Delete</button>
-                                </div>
-                                <div class="mt-2 ml-4">
-                                    <form class="reply-form">
-                                        <input type="text" class="form-input w-full" placeholder="Reply to this comment">
-                                        <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded mt-2"><i class="fas fa-reply"></i> Reply</button>
-                                    </form>
-                                    <div class="replies-section"></div>
+                                <div class="d-flex justify-content-between">
+                                    <button class="btn btn-info"><i class="fas fa-user"></i> View User Profile</button>
+                                    <button class="btn btn-danger delete-comment"><i class="fas fa-trash"></i> Delete</button>
                                 </div>
                             `;
-
                             commentsSection.appendChild(newComment);
 
                             const deleteCommentButton = newComment.querySelector('.delete-comment');
                             deleteCommentButton.addEventListener('click', function() {
                                 newComment.remove();
-                            });
-
-                            const replyForm = newComment.querySelector('.reply-form');
-                            const repliesSection = newComment.querySelector('.replies-section');
-                            let replyCount = 0;
-
-                            replyForm.addEventListener('submit', function(event) {
-                                event.preventDefault();
-                                const replyInput = replyForm.querySelector('input');
-                                const replyText = replyInput.value;
-
-                                if (replyText && replyCount < 10) {
-                                    const newReply = document.createElement('div');
-                                    newReply.classList.add('p-4', 'bg-gray-100', 'rounded', 'shadow', 'mb-2');
-                                    newReply.innerHTML = `
-                                        <p>${replyText}</p>
-                                        <div class="flex space-x-2">
-                                            <button class="text-blue-600" data-target="profile"><i class="fas fa-user"></i> View User Profile</button>
-                                            <button class="text-red-600 delete-reply"><i class="fas fa-trash"></i> Delete</button>
-                                        </div>
-                                    `;
-                                    repliesSection.appendChild(newReply);
-
-                                    const deleteReplyButton = newReply.querySelector('.delete-reply');
-                                    deleteReplyButton.addEventListener('click', function() {
-                                        newReply.remove();
-                                    });
-
-                                    replyInput.value = '';
-                                    replyCount++;
-                                }
                             });
 
                             commentInput.value = '';
@@ -331,37 +300,37 @@
             const editFrustrations = document.getElementById('edit-frustrations');
 
             editProfileButton.addEventListener('click', function() {
-                interests.classList.add('hidden');
-                editInterests.classList.remove('hidden');
+                interests.classList.add('d-none');
+                editInterests.classList.remove('d-none');
                 editInterests.value = interests.textContent;
 
-                goals.classList.add('hidden');
-                editGoals.classList.remove('hidden');
+                goals.classList.add('d-none');
+                editGoals.classList.remove('d-none');
                 editGoals.value = goals.textContent;
 
-                frustrations.classList.add('hidden');
-                editFrustrations.classList.remove('hidden');
+                frustrations.classList.add('d-none');
+                editFrustrations.classList.remove('d-none');
                 editFrustrations.value = frustrations.textContent;
 
-                editProfileButton.classList.add('hidden');
-                saveProfileButton.classList.remove('hidden');
+                editProfileButton.classList.add('d-none');
+                saveProfileButton.classList.remove('d-none');
             });
 
             saveProfileButton.addEventListener('click', function() {
                 interests.textContent = editInterests.value;
-                interests.classList.remove('hidden');
-                editInterests.classList.add('hidden');
+                interests.classList.remove('d-none');
+                editInterests.classList.add('d-none');
 
                 goals.textContent = editGoals.value;
-                goals.classList.remove('hidden');
-                editGoals.classList.add('hidden');
+                goals.classList.remove('d-none');
+                editGoals.classList.add('d-none');
 
                 frustrations.textContent = editFrustrations.value;
-                frustrations.classList.remove('hidden');
-                editFrustrations.classList.add('hidden');
+                frustrations.classList.remove('d-none');
+                editFrustrations.classList.add('d-none');
 
-                editProfileButton.classList.remove('hidden');
-                saveProfileButton.classList.add('hidden');
+                editProfileButton.classList.remove('d-none');
+                saveProfileButton.classList.add('d-none');
             });
 
             const searchForm = document.getElementById('search-form');
@@ -378,30 +347,21 @@
                             const title = discussion.querySelector('h4').textContent.toLowerCase();
                             const message = discussion.querySelector('p').textContent.toLowerCase();
                             if (title.includes(query) || message.includes(query)) {
-                                discussion.classList.remove('hidden');
+                                discussion.classList.remove('d-none');
                             } else {
-                                discussion.classList.add('hidden');
+                                discussion.classList.add('d-none');
                             }
                         });
                     } else {
                         const content = section.textContent.toLowerCase();
                         if (content.includes(query)) {
-                            section.classList.remove('hidden');
+                            section.classList.remove('d-none');
                         } else {
-                            section.classList.add('hidden');
+                            section.classList.add('d-none');
                         }
                     }
                 });
             });
-
-            // Load the AI chatbot
-            const chatbotScript1 = document.createElement('script');
-            chatbotScript1.src = 'https://cdn.botpress.cloud/webchat/v2.2/inject.js';
-            document.body.appendChild(chatbotScript1);
-
-            const chatbotScript2 = document.createElement('script');
-            chatbotScript2.src = 'https://files.bpcontent.cloud/2024/11/03/00/20241103003036-WX5Y2EGG.js';
-            document.body.appendChild(chatbotScript2);
         });
     </script>
 </body>
