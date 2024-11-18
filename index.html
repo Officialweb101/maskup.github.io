@@ -92,60 +92,7 @@
             <div class="mb-4">
                 <h3 class="h6">Recent Discussions</h3>
                 <div class="forum-section">
-                    <div class="p-4 bg-dark rounded mb-4">
-                        <h4 class="h6">Feeling Overwhelmed with Schoolwork</h4>
-                        <p class="text-light">Posted by Anonymous on ${new Date().toLocaleDateString()}</p>
-                        <p>I've been feeling really overwhelmed with all the assignments and exams coming up. It's hard to keep up, and I feel like I'm drowning. Anyone else feeling this way?</p>
-                        <div class="d-flex justify-content-between mb-2">
-                            <button class="btn btn-info"><i class="fas fa-user"></i> View User Profile</button>
-                            <button class="btn btn-danger delete-thread"><i class="fas fa-trash"></i> Delete</button>
-                        </div>
-                        <div class="mt-2">
-                            <h5 class="h6">Comments</h5>
-                            <div class="space-y-2 comments-section">
-                                <div class="p-2 bg-dark rounded mb-2">
-                                    <p>I totally understand how you feel! I had a similar experience last semester. Just remember to take breaks and reach out for help if you need it.</p>
-                                    <div class="d-flex justify-content-between">
-                                        <button class="btn btn-info"><i class="fas fa-user"></i> View User Profile</button>
-                                        <button class="btn btn-danger delete-comment"><i class="fas fa-trash"></i> Delete</button>
-                                    </div>
-                                </div>
-                                <div class="p-2 bg-dark rounded mb-2">
-                                    <p>You're not alone! I often feel overwhelmed too. Have you tried making a schedule? It helps me manage my time better.</p>
-                                    <div class="d-flex justify-content-between">
-                                        <button class="btn btn-info"><i class="fas fa-user"></i> View User Profile</button>
-                                        <button class="btn btn-danger delete-comment"><i class="fas fa-trash"></i> Delete</button>
-                                    </div>
-                                </div>
-                                <div class="p-2 bg-dark rounded mb-2">
-                                    <p>Hang in there! It's okay to feel this way. Just take it one step at a time. You got this!</p>
-                                    <div class="d-flex justify-content-between">
-                                        <button class="btn btn-info"><i class="fas fa-user"></i> View User Profile</button>
-                                        <button class="btn btn-danger delete-comment"><i class="fas fa-trash"></i> Delete</button>
-                                    </div>
-                                </div>
-                                <div class="p-2 bg-dark rounded mb-2">
-                                    <p>Have you considered talking to a counselor? They can provide great support and strategies to cope with stress.</p>
-                                    <div class="d-flex justify-content-between">
-                                        <button class="btn btn-info"><i class="fas fa-user"></i> View User Profile</button>
-                                        <button class="btn btn-danger delete-comment"><i class="fas fa-trash"></i> Delete</button>
-                                    </div>
-                                </div>
-                                <div class="p-2 bg-dark rounded mb-2">
-                                    <p>It's really tough, but remember to prioritize your mental health. Don't hesitate to take a day off if you need it!</p>
-                                    <div class="d-flex justify-content-between">
-                                        <button class="btn btn-info"><i class="fas fa-user"></i> View User Profile</button>
-                                        <button class="btn btn-danger delete-comment"><i class="fas fa-trash"></i> Delete</button>
-                                    </div>
-                                </div>
-                            </div>
-                            <form class="mt-2 comment-form">
-                                <input type="text" class="form-control" placeholder="Add a comment" required>
-                                <button type="submit" class="btn btn-primary mt-2"><i class="fas fa-comment"></i> Comment</button>
-                            </form>
-                        </div>
-                    </div>
-                </div ```html
+                    <!-- New discussions will be prepended here -->
                 </div>
             </div>
             <div class="bg-dark p-4 rounded mb-4">
@@ -162,7 +109,9 @@
                     <button type="submit" class="btn btn-primary"><i class="fas fa-paper-plane"></i> Post Anonymously</button>
                 </form>
             </div>
+        </section>
 
+        <section id="about" class="bg-dark p-4 rounded mb-4 d-none">
             <h2 class="h5 mb-4">About Us</h2>
             <p>Mask Up: Stay Anonymous is a platform designed to provide a safe and anonymous space for students and young adults to share their emotional struggles and receive peer support.</p>
             <h3 class="h6 mt-4">A Poem for You</h3>
@@ -171,7 +120,9 @@
             With every word, we heal and grow,<br>
             In this safe space, let your true self show."</p>
             <p class="mt-4">Created with love by Christian, Shanniah, and Julia.</p>
+        </section>
 
+        <section id="features" class="bg-dark p-4 rounded mb-4 d-none">
             <h2 class="h5 mb-4">Features</h2>
             <div class="carousel">
                 <div class="carousel-item">
@@ -199,7 +150,9 @@
                 <li>AI Discussion</li>
                 <li>Music Jam Session</li>
             </ul>
+        </section>
 
+        <section id="contact" class="bg-dark p-4 rounded mb-4 d-none">
             <h2 class="h5 mb-4">Contact Us</h2>
             <p>If you have any questions or need support, feel free to reach out to us:</p>
             <ul class="list-unstyled">
@@ -210,7 +163,9 @@
                 <li><a href="#" class="text-primary">Instagram</a></li>
             </ul>
             <p class="mt-4">You can also send us a direct message through our platform.</p>
+        </section>
 
+        <section id="profile" class="bg-dark p-4 rounded mb-4 d-none">
             <h2 class="h5 mb-4">User  Profile</h2>
             <div class="mb-4">
                 <h3 class="h6">Interests</h3>
@@ -219,8 +174,7 @@
             </div>
             <div class="mb-4">
                 <h3 class="h6">Goals</h3>
-                <p id ```html
-                ="goals">Build a network of friends who understand her struggles and share supportive interactions</p>
+                <p id="goals">Build a network of friends who understand her struggles and share supportive interactions</p>
                 <input type="text" id="edit-goals" class="form-control d-none">
             </div>
             <div class="mb-4">
@@ -242,6 +196,8 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.botpress.cloud/webchat/v2.2/inject.js"></script>
+	<script src="https://files.bpcontent.cloud/2024/11/03/00/20241103003036-WX5Y2EGG.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             const navLinks = document.querySelectorAll('nav a');
@@ -291,7 +247,7 @@
                         <p>${message}</p>
                         <div class="d-flex justify-content-between mb-2">
                             <button class="btn btn-info"><i class="fas fa-user"></i> View User Profile</button>
-                            <button class="btn btn-danger delete-thread"><i class="fas fa-trash"></i> Delete</button>
+                            <button class ="btn btn-danger delete-thread"><i class="fas fa-trash"></i> Delete</button>
                         </div>
                         <div class="mt-2">
                             <h5 class="h6">Comments</h5>
@@ -320,8 +276,7 @@
 
                         if (commentText) {
                             const newComment = document.createElement('div');
-                            newComment.classList.add('p ```html
-                            -2', 'bg-dark', 'rounded', 'mb-2');
+                            newComment.classList.add('p-2', 'bg-dark', 'rounded', 'mb-2');
 
                             newComment.innerHTML = `
                                 <p>${commentText}</p>
