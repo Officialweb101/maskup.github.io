@@ -79,7 +79,7 @@
             <div class="mb-4">
                 <h3 class="h6">Rules and Regulations</h3>
                 <ul class="list-unstyled">
-                    <li > Be respectful and supportive.</li>
+                    <li>Be respectful and supportive.</li>
                     <li>No personal attacks or harassment.</li>
                     <li>Keep discussions constructive and on-topic.</li>
                 </ul>
@@ -92,7 +92,60 @@
             <div class="mb-4">
                 <h3 class="h6">Recent Discussions</h3>
                 <div class="forum-section">
-                    <!-- New discussions will be prepended here -->
+                    <div class="p-4 bg-dark rounded mb-4">
+                        <h4 class="h6">Feeling Overwhelmed with Schoolwork</h4>
+                        <p class="text-light">Posted by Anonymous on ${new Date().toLocaleDateString()}</p>
+                        <p>I've been feeling really overwhelmed with all the assignments and exams coming up. It's hard to keep up, and I feel like I'm drowning. Anyone else feeling this way?</p>
+                        <div class="d-flex justify-content-between mb-2">
+                            <button class="btn btn-info"><i class="fas fa-user"></i> View User Profile</button>
+                            <button class="btn btn-danger delete-thread"><i class="fas fa-trash"></i> Delete</button>
+                        </div>
+                        <div class="mt-2">
+                            <h5 class="h6">Comments</h5>
+                            <div class="space-y-2 comments-section">
+                                <div class="p-2 bg-dark rounded mb-2">
+                                    <p>I totally understand how you feel! I had a similar experience last semester. Just remember to take breaks and reach out for help if you need it.</p>
+                                    <div class="d-flex justify-content-between">
+                                        <button class="btn btn-info"><i class="fas fa-user"></i> View User Profile</button>
+                                        <button class="btn btn-danger delete-comment"><i class="fas fa-trash"></i> Delete</button>
+                                    </div>
+                                </div>
+                                <div class="p-2 bg-dark rounded mb-2">
+                                    <p>You're not alone! I often feel overwhelmed too. Have you tried making a schedule? It helps me manage my time better.</p>
+                                    <div class="d-flex justify-content-between">
+                                        <button class="btn btn-info"><i class="fas fa-user"></i> View User Profile</button>
+                                        <button class="btn btn-danger delete-comment"><i class="fas fa-trash"></i> Delete</button>
+                                    </div>
+                                </div>
+                                <div class="p-2 bg-dark rounded mb-2">
+                                    <p>Hang in there! It's okay to feel this way. Just take it one step at a time. You got this!</p>
+                                    <div class="d-flex justify-content-between">
+                                        <button class="btn btn-info"><i class="fas fa-user"></i> View User Profile</button>
+                                        <button class="btn btn-danger delete-comment"><i class="fas fa-trash"></i> Delete</button>
+                                    </div>
+                                </div>
+                                <div class="p-2 bg-dark rounded mb-2">
+                                    <p>Have you considered talking to a counselor? They can provide great support and strategies to cope with stress.</p>
+                                    <div class="d-flex justify-content-between">
+                                        <button class="btn btn-info"><i class="fas fa-user"></i> View User Profile</button>
+                                        <button class="btn btn-danger delete-comment"><i class="fas fa-trash"></i> Delete</button>
+                                    </div>
+                                </div>
+                                <div class="p-2 bg-dark rounded mb-2">
+                                    <p>It's really tough, but remember to prioritize your mental health. Don't hesitate to take a day off if you need it!</p>
+                                    <div class="d-flex justify-content-between">
+                                        <button class="btn btn-info"><i class="fas fa-user"></i> View User Profile</button>
+                                        <button class="btn btn-danger delete-comment"><i class="fas fa-trash"></i> Delete</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <form class="mt-2 comment-form">
+                                <input type="text" class="form-control" placeholder="Add a comment" required>
+                                <button type="submit" class="btn btn-primary mt-2"><i class="fas fa-comment"></i> Comment</button>
+                            </form>
+                        </div>
+                    </div>
+                </div ```html
                 </div>
             </div>
             <div class="bg-dark p-4 rounded mb-4">
@@ -152,7 +205,7 @@
             <ul class="list-unstyled">
                 <li>Email: <a href="mailto:support@maskup.com" class="text-primary">support@maskup.com</a></li>
                 <li>Follow us on social media:</li>
-                <li><a href="#" class="text-primary ">Facebook</a></li>
+                <li><a href="#" class="text-primary">Facebook</a></li>
                 <li><a href="#" class="text-primary">Twitter</a></li>
                 <li><a href="#" class="text-primary">Instagram</a></li>
             </ul>
@@ -166,7 +219,8 @@
             </div>
             <div class="mb-4">
                 <h3 class="h6">Goals</h3>
-                <p id="goals">Build a network of friends who understand her struggles and share supportive interactions</p>
+                <p id ```html
+                ="goals">Build a network of friends who understand her struggles and share supportive interactions</p>
                 <input type="text" id="edit-goals" class="form-control d-none">
             </div>
             <div class="mb-4">
@@ -266,7 +320,8 @@
 
                         if (commentText) {
                             const newComment = document.createElement('div');
-                            newComment.classList.add('p-2', 'bg-dark', 'rounded', 'mb-2');
+                            newComment.classList.add('p ```html
+                            -2', 'bg-dark', 'rounded', 'mb-2');
 
                             newComment.innerHTML = `
                                 <p>${commentText}</p>
