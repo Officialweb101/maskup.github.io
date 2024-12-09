@@ -9,8 +9,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
         body {
-            background-color: #121212; /* Dark background */
-            color: #ffffff; /* Light text color */
+            background-color: #94fde8; /* Dark background */
+            color: #363636; /* Light text color */
             font-family: 'Roboto', sans-serif;
         }
         .header-icon {
@@ -27,16 +27,16 @@
             width: 100%;
             padding: 1rem;
             border-radius: 0.5rem;
-            background-color: #1e1e1e; /* Darker card background */
+            background-color: #56ff68; /* Darker card background */
             margin-right: 1rem;
         }
         .footer {
-            background-color: #1f1f1f; /* Dark footer */
+            background-color: Blue; /* Dark footer */
         }
     </style>
 </head>
 <body>
-    <header class="bg-dark text-light p-4 sticky-top shadow">
+    <header class="bg-blue text-light p-4 sticky-top shadow">
         <div class="container d-flex justify-content-between align-items-center">
             <h1 class="h4">
                 <i class="fas fa-mask header-icon"></i>
@@ -71,7 +71,7 @@
     </header>
 
     <main class="container my-4">
-        <section id="home" class="bg-dark p-4 rounded mb-4">
+        <section id="home" class="bg-white p-4 rounded mb-4">
             <div class="d-flex justify-content-between align-items-center mb-4">
                 <h2 class="h5">Forum</h2>
                 <button class="btn btn-primary" data-target="contact">Seek Help <i class="fas fa-hands-helping"></i></button>
@@ -95,7 +95,7 @@
                     <!-- New discussions will be prepended here -->
                 </div>
             </div>
-            <div class="bg-dark p-4 rounded mb-4">
+            <div class="bg-white p-4 rounded mb-4">
                 <h2 class="h6 mb-4">Start a New Discussion</h2>
                 <form id="discussion-form">
                     <div class="form-group">
@@ -109,9 +109,48 @@
                     <button type="submit" class="btn btn-primary"><i class="fas fa-paper-plane"></i> Post Anonymously</button>
                 </form>
             </div>
+			   <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"></link>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+    </style>
+	  <div class="flex items-center mb-6">
+            <i class="fas fa-hands-helping text-blue-500 text-4xl mr-4"></i>
+            <h2 class="text-4xl font-bold text-gray-800">Emotional Support</h2>
+        </div>
+        <p class="text-gray-600 mb-8 text-lg">If you have any questions or need support, feel free to reach out to us. We are here to help you:</p>
+        <ul class="list-none text-gray-600 mb-8">
+            <li class="mb-6 flex items-center">
+                <i class="fas fa-envelope text-blue-500 text-2xl mr-3"></i>
+                <span>Email: <a href="mailto:support@maskup.com" class="text-blue-500 underline">support@maskup.com</a></span>
+            </li>
+            <li class="mb-4 text-lg flex items-center">
+                <i class="fas fa-share-alt text-blue-500 text-2xl mr-3"></i>
+                Follow us on social media:
+            </li>
+            <li class="mb-4 flex items-center">
+                <a href="#" class="text-blue-500 flex items-center">
+                    <i class="fab fa-facebook text-2xl mr-3"></i> Facebook
+                </a>
+            </li>
+            <li class="mb-4 flex items-center">
+                <a href="#" class="text-blue-500 flex items-center">
+                    <i class="fab fa-twitter text-2xl mr-3"></i> Twitter
+                </a>
+            </li>
+            <li class="mb-4 flex items-center">
+                <a href="#" class="text-blue-500 flex items-center">
+                    <i class="fab fa-instagram text-2xl mr-3"></i> Instagram
+                </a>
+            </li>
+        </ul>
+        <p class="text-gray-600 text-lg">You can also send us a direct message through our platform. We are here to listen and support you.</p>
         </section>
 
-        <section id="about" class="bg-dark p-4 rounded mb-4 d-none">
+        <section id="about" class="bg-white p-4 rounded mb-4 d-none">
             <h2 class="h5 mb-4">About Us</h2>
             <p>Mask Up: Stay Anonymous is a platform designed to provide a safe and anonymous space for students and young adults to share their emotional struggles and receive peer support.</p>
             <h3 class="h6 mt-4">A Poem for You</h3>
@@ -119,40 +158,128 @@
             Together we stand, ready to fight.<br>
             With every word, we heal and grow,<br>
             In this safe space, let your true self show."</p>
-            <p class="mt-4">Created with love by Christian, Shanniah, and Julia.</p>
+            <p class="mt-4">Created with love by Unknown.</p>
         </section>
 
-        <section id="features" class="bg-dark p-4 rounded mb-4 d-none">
+        <section id="features" class="bg-white p-4 rounded mb-4 d-none">
+	<script src="https://cdn.tailwindcss.com">
+ </script>
+ <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+ <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+ <style>
+  body {
+            font-family: 'Roboto', sans-serif;
+        }
+        .carousel-item {
+            transition: transform 0.3s ease-in-out;
+        }
+        .carousel-item:hover {
+            transform: scale(1.05);
+        }
+ </style>
             <h2 class="h5 mb-4">Features</h2>
-            <div class="carousel">
-                <div class="carousel-item">
-                    <h3 class="h6"><i class="fas fa-user-secret"></i> Anonymous Profiles</h3>
-                    <p>Interact without revealing your identity, helping you feel comfortable sharing personal struggles.</p>
-                </div>
-                <div class="carousel-item">
-                    <h3 class="h6"><i class="fas fa-users"></i> Community-Based Support</h3>
-                    <p>Join small groups or forums where you can engage in peer-led support with others who share similar issues.</p>
-                </div>
-                <div class="carousel-item">
-                    <h3 class="h6"><i class="fas fa-heart"></i> Emotional Check-Ins and Guidance</h3>
-                    <p>Daily prompts for mood tracking, with access to supportive messages, mental health tips, or options to connect with peers feeling similarly.</p>
-                </div>
-                <div class="carousel-item">
-                    <h3 class="h6"><i class="fas fa-shield-alt"></i> Content Moderation & Safety</h3>
-                    <p>All discussions are monitored to ensure they remain supportive and non-triggering, maintaining a positive atmosphere.</p>
-                </div>
-            </div>
-            <h3 class="h6 mt-4">Upcoming Events</h3>
-            <ul class="list-unstyled">
-                <li>Games Night</li>
-                <li>Art Therapy Session</li>
-                <li>Poetry Reading</li>
-                <li>AI Discussion</li>
-                <li>Music Jam Session</li>
-            </ul>
+          <div class="carousel space-y-8">
+   <div class="carousel-item flex items-start space-x-4">
+    <img alt="Icon representing anonymous profiles" class="w-16 h-16 rounded-full" height="100" src="https://storage.googleapis.com/a1aa/image/aKlVHnx3KRY6E9elOhapUCKYgwux52NaZGfSNLE4Kq7uhS5TA.jpg" width="100"/>
+    <div>
+     <h3 class="text-2xl font-semibold text-gray-800">
+      Anonymous Profiles
+     </h3>
+     <p class="text-gray-600">
+      Interact without revealing your identity, helping you feel comfortable sharing personal struggles.
+     </p>
+    </div>
+   </div>
+   <div class="carousel-item flex items-start space-x-4">
+    <img alt="Icon representing community-based support" class="w-16 h-16 rounded-full" height="100" src="https://storage.googleapis.com/a1aa/image/XB3eTeU3xfRZOoWA7d1V4Z552lWeEKFxyzLSeWdiurdCOUKfE.jpg" width="100"/>
+    <div>
+     <h3 class="text-2xl font-semibold text-gray-800">
+      Community-Based Support
+     </h3>
+     <p class="text-gray-600">
+      Join small groups or forums where you can engage in peer-led support with others who share similar issues.
+     </p>
+    </div>
+   </div>
+   <div class="carousel-item flex items-start space-x-4">
+    <img alt="Icon representing emotional check-ins and guidance" class="w-16 h-16 rounded-full" height="100" src="https://storage.googleapis.com/a1aa/image/jSRQofXqFbSScKeDEdncpBNldrffVTDUGmXKKhbrCP9IHKlPB.jpg" width="100"/>
+    <div>
+     <h3 class="text-2xl font-semibold text-gray-800">
+      Emotional Check-Ins and Guidance
+     </h3>
+     <p class="text-gray-600">
+      Daily prompts for mood tracking, with access to supportive messages, mental health tips, or options to connect with peers feeling similarly.
+     </p>
+    </div>
+   </div>
+   <div class="carousel-item flex items-start space-x-4">
+    <img alt="Icon representing content moderation and safety" class="w-16 h-16 rounded-full" height="100" src="https://storage.googleapis.com/a1aa/image/tlyq0k6A8co7B12TnLmOT1YVivlGjy2EXy3ljgpWECf4Qp8JA.jpg" width="100"/>
+    <div>
+     <h3 class="text-2xl font-semibold text-gray-800">
+      Content Moderation &amp; Safety
+     </h3>
+     <p class="text-gray-600">
+      All discussions are monitored to ensure they remain supportive and non-triggering, maintaining a positive atmosphere.
+     </p>
+    </div>
+   </div>
+  </div>
+  <h3 class="text-2xl font-semibold text-gray-800 mt-8">
+   Upcoming Events
+  </h3>
+  <button class="bg-blue-500 text-white px-4 py-2 rounded mt-4" id="toggleEvents">
+   Show/Hide Events
+  </button>
+  <ul class="list-none text-gray-600 mt-4 space-y-2 hidden" id="eventsList">
+   <li class="flex items-center">
+    <i class="fas fa-gamepad text-blue-500 text-xl mr-3">
+    </i>
+    <a class="text-blue-500 underline" href="https://example.com/games-night">
+     Games Night
+    </a>
+   </li>
+   <li class="flex items-center">
+    <i class="fas fa-paint-brush text-blue-500 text-xl mr-3">
+    </i>
+    <a class="text-blue-500 underline" href="https://example.com/art-therapy">
+     Art Therapy Session
+    </a>
+   </li>
+   <li class="flex items-center">
+    <i class="fas fa-book text-blue-500 text-xl mr-3">
+    </i>
+    <a class="text-blue-500 underline" href="https://example.com/poetry-reading">
+     Poetry Reading
+    </a>
+   </li>
+   <li class="flex items-center">
+    <i class="fas fa-robot text-blue-500 text-xl mr-3">
+    </i>
+    <a class="text-blue-500 underline" href="https://example.com/ai-discussion">
+     AI Discussion
+    </a>
+   </li>
+   <li class="flex items-center">
+    <i class="fas fa-music text-blue-500 text-xl mr-3">
+    </i>
+    <a class="text-blue-500 underline" href="https://example.com/music-jam">
+     Music Jam Session
+    </a>
+   </li>
+  </ul>
+  <script>
+  document.getElementById('toggleEvents').addEventListener('click', function() {
+            var eventsList = document.getElementById('eventsList');
+            if (eventsList.classList.contains('hidden')) {
+                eventsList.classList.remove('hidden');
+            } else {
+                eventsList.classList.add('hidden');
+            }
+        });
+ </script>
         </section>
 
-        <section id="contact" class="bg-dark p-4 rounded mb-4 d-none">
+        <section id="contact" class="bg-white p-4 rounded mb-4 d-none">
             <h2 class="h5 mb-4">Contact Us</h2>
             <p>If you have any questions or need support, feel free to reach out to us:</p>
             <ul class="list-unstyled">
@@ -165,7 +292,7 @@
             <p class="mt-4">You can also send us a direct message through our platform.</p>
         </section>
 
-        <section id="profile" class="bg-dark p-4 rounded mb-4 d-none">
+        <section id="profile" class="bg-white p-4 rounded mb-4 d-none">
             <h2 class="h5 mb-4">User  Profile</h2>
             <div class="mb-4">
                 <h3 class="h6">Interests</h3>
@@ -239,7 +366,7 @@
 
                 if (title && message) {
                     const newDiscussion = document.createElement('div');
-                    newDiscussion.classList.add('p-4', 'bg-dark', 'rounded', 'mb-4');
+                    newDiscussion.classList.add('p-4', 'bg-white', 'rounded', 'mb-4');
 
                     newDiscussion.innerHTML = `
                         <h4 class="h6">${title}</h4>
